@@ -1,0 +1,344 @@
+/**** Basic setup here *****/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  background: #f9f9f9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a, span, i, p {
+  display: inline-block;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/**** Section start ******/
+.main-content {
+  padding-top: 20px;
+}
+
+.rating-card {
+  background-color: #fff;
+  padding: 30px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.rating-number {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.rating-number small {
+  font-size: 16px;
+}
+
+.rating-stars:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #eee;
+}
+
+.rating-stars .filled-star {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffc107;
+}
+
+.rating-stars img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.rating-progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0px;
+}
+
+.rating-progress .rating-grade {
+  padding: 3px 20px 3px 0;
+  float: left;
+  width: 50px;
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rating-progress .rating-grade img {
+  height: 15px;
+  margin-left: 3px;
+}
+
+.rating-progress .progress {
+  float: left;
+  width: calc(100% - 110px);
+  border-radius: 10px;
+}
+
+.rating-progress .progress .bg-warning {
+  background-color: #ffc107 !important;
+  border-radius: 10px;
+}
+
+.rating-progress .rating-value {
+  padding: 3px 0 3px 20px;
+  float: left;
+  width: 60px;
+}
+
+.rating-progress:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.Rating-area .star-area {
+  background: #F8F8F9;
+  padding: 50px 15px;
+  border-radius: 10px;
+}
+
+/**** Add rating section *****/
+section.add-rating {
+  padding-bottom: 30px;
+}
+
+section.add-rating .section-wrapper {
+  padding: 20px 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+section.add-rating .rating-stars:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #eee;
+}
+
+section.add-rating .rating-stars .filled-star {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffc107;
+}
+
+section.add-rating .rating-stars img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+section.add-rating .F-log-out {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px 0px;
+}
+
+section.add-rating .F-log-out h2 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+section.add-rating .F-log-out .fb-btn {
+  line-height: 38px;
+  border-radius: 5px;
+  padding: 0px 12px;
+  color: #fff;
+  font-size: 18px;
+  background: #3F5AA9;
+}
+
+section.add-rating .update {
+  margin-top: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section.add-rating .update label {
+  background: #0000004b;
+  border-radius: 15px;
+}
+
+section.add-rating .update .rating span {
+  color: #ffc107;
+  font-size: 45px;
+  margin: 0px 15px;
+}
+
+section.add-rating .update .update-btn {
+  background: #10AA0D;
+  color: #fff;
+  padding: 0px 20px;
+  line-height: 40px;
+  border-radius: 7px;
+  height: 45px;
+  font-size: 24px;
+}
+
+/**** Rating overview List section***/
+.overview-list {
+  margin-bottom: 50px;
+}
+
+.overview-list .overview-wrapper {
+  border-radius: 10px;
+  padding: 30px;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.overview-list .list-title {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.overview-list .list-user {
+  padding: 20px 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.overview-list .list-user img {
+  width: 70px;
+  margin-right: 30px;
+  border-radius: 50%;
+}
+
+.overview-list .list-user h3 {
+  font-size: 24px;
+}
+
+.overview-list .list-user h3 span {
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  color: #777777;
+}
+
+.overview-list .user-1 {
+  border-bottom: 1px solid #77777770;
+}
+
+/**** Responsive Works ****/
+@media screen and (max-width: 768px) {
+  h4.Rating-title {
+    text-align: center;
+  }
+  .rating-left {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  section.add-rating .section-wrapper {
+    padding: 15px 15px;
+  }
+  section.add-rating .update .rating span {
+    font-size: 44px;
+    margin: 0px 10px;
+  }
+  section.add-rating .F-log-out {
+    margin: 20px 0px;
+  }
+  section.add-rating .update {
+    margin-top: 25px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Rating-area .star-area {
+    padding: 20px 0px;
+  }
+  .rating-card {
+    background-color: #fff;
+    padding: 20px 0px 0px 0px;
+  }
+  .Rating-area .star-area {
+    width: 95%;
+    margin: auto;
+    padding: 20px 0px 20px 0px;
+  }
+  section.add-rating .F-log-out h2 {
+    color: #fff;
+    font-size: 24px;
+  }
+  section.add-rating .update .rating span {
+    font-size: 32px;
+    margin: 0px 0px;
+  }
+  section.add-rating .update label {
+    background: #0000004b;
+    border-radius: 10px;
+    padding: 0px 10px;
+  }
+  .overview-list .list-user h3 {
+    font-size: 22px;
+  }
+  .overview-list .list-user h3 span {
+    display: block;
+    font-size: 16px;
+  }
+  .overview-list .list-user img {
+    width: 70px;
+    margin-right: 18px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
